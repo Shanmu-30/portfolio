@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Shanmugapriya | Portfolio</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Circuit Board/Cyber Node Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="accent-text">&lt;</span><span id="nav-logo-name">SHANMUGAPRIYA</span><span class="accent-text">&gt;</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="nav-btn" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="customizer-open-btn" class="cta-btn sm-btn">
+                <i class="fas fa-sliders-h"></i> Customize
+            </button>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Available for Placements
+                </div>
+                <h1 class="hero-title">Hi, I'm <span id="hero-name" class="gradient-text">N SHANMUGAPRIYA</span></h1>
+                <h2 id="hero-subtitle" class="hero-subtitle">Electronics and Communication Engineering Student</h2>
+                <p id="hero-about-brief" class="hero-description">
+                    Motivated second-year ECE student at Sona College of Technology, passionate about applying technical skills in electronics, programming, and cybersecurity.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#projects" class="cta-btn primary-btn">View Projects</a>
+                    <a href="#contact" class="cta-btn secondary-btn">Get In Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="#" id="social-linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" id="social-github" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" id="social-email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <!-- Graphic Element: Glassmorphic Circuit/Network Card -->
+            <div class="hero-visual">
+                <div class="glass-card-visual">
+                    <div class="circuit-header">
+                        <span class="circuit-chip"></span>
+                        <div class="circuit-status">
+                            <span class="status-indicator"></span>
+                            SYSTEMS ACTIVE
+                        </div>
+                    </div>
+                    <div class="circuit-body">
+                        <div class="spec-row">
+                            <span class="spec-label">Discipline</span>
+                            <span class="spec-val">Electronics & Comm.</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Focus Areas</span>
+                            <span class="spec-val">Hardware, Cybersafe</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Current Year</span>
+                            <span class="spec-val">2nd Year (B.E.)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Institution</span>
+                            <span class="spec-val">Sona College</span>
+                        </div>
+                    </div>
+                    <div class="circuit-footer">
+                        <div class="code-line">const student = new ECEStudent();</div>
+                        <div class="code-line">student.focusOn("Future Tech");</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <h2 class="section-title">Academic Journey</h2>
+            <div class="section-divider"></div>
+            
+            <div class="about-grid">
+                <!-- Description -->
+                <div class="about-bio-card glass-card">
+                    <h3 class="card-subtitle"><i class="fas fa-user-graduate accent-icon"></i> About Me</h3>
+                    <p id="about-full-text">
+                        Motivated second-year Electronics and Communication Engineering (ECE) student at Sona College of Technology. Keen interest in bridging electronics, foundational programming, and cybersecurity. Seeking to leverage analytical abilities, circuit-design concepts, and cyberthreat awareness in dynamic, collaborative environments.
+                    </p>
+                    <div class="personal-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Location</span>
+                                <strong id="about-location">Salem, Tamil Nadu</strong>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <span>SCT Roll No.</span>
+                                <strong>61782324103148</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline / Education -->
+                <div class="timeline-container">
+                    <h3 class="card-subtitle"><i class="fas fa-history accent-icon"></i> Education</h3>
+                    <div id="education-timeline" class="timeline">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="section-divider"></div>
+            
+            <div class="skills-categories" id="skills-grid">
+                <!-- Rendered via JS -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="section-divider"></div>
+            
+            <div class="projects-grid" id="projects-container">
+                <!-- Rendered via JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <h2 class="section-title">Connect with Me</h2>
+            <div class="section-divider"></div>
+            
+            <div class="contact-grid">
+                <div class="contact-info glass-card">
+                    <h3>Let's collaborate!</h3>
+                    <p>I am looking for internship, workshop, and placement opportunities. Reach out if you would like to discuss engineering, security awareness, or digital projects.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span>Email Me</span>
+                                <a href="mailto:shanmu30112006@gmail.com" id="contact-email-val">shanmu30112006@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span>Call Me</span>
+                                <a href="tel:6374288126" id="contact-phone-val">+91 63742 88126</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fas fa-award"></i></div>
+                            <div>
+                                <span>Achievements</span>
+                                <ul class="achievements-list" id="achievements-list">
+                                    <!-- Rendered via JS -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container glass-card">
+                    <form id="contact-form" autocomplete="off">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="form-name" required placeholder=" ">
+                                <label for="form-name">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="form-email" required placeholder=" ">
+                                <label for="form-email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="form-subject" required placeholder=" ">
+                            <label for="form-subject">Subject</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="form-message" required placeholder=" " rows="5"></textarea>
+                            <label for="form-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="cta-btn primary-btn block-btn">
+                            <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback hidden"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 N Shanmugapriya. Designed for excellence.</p>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIVE CUSTOMIZER SIDEBAR DRAWER -->
+    <div id="customizer-drawer" class="customizer-drawer">
+        <div class="customizer-header">
+            <h3><i class="fas fa-sliders-h"></i> Live Customizer</h3>
+            <button id="customizer-close-btn" class="close-btn" aria-label="Close Customizer">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="customizer-body">
+            <p class="customizer-intro">Edit any fields below to watch the portfolio transform in real time. Once you are happy, download or copy your tailored config!</p>
+            
+            <div class="customizer-section">
+                <h4><i class="fas fa-palette"></i> Colors & Theme</h4>
+                <div class="customizer-row">
+                    <div class="color-picker-group">
+                        <label for="picker-primary">Accent 1</label>
+                        <input type="color" id="picker-primary" value="#00f0ff">
+                    </div>
+                    <div class="color-picker-group">
+                        <label for="picker-secondary">Accent 2</label>
+                        <input type="color" id="picker-secondary" value="#ff7b00">
+                    </div>
+                </div>
+            </div>
+
+            <div class="customizer-section">
+                <h4><i class="fas fa-user"></i> Core Profile</h4>
+                <div class="input-field">
+                    <label for="input-name">Name</label>
+                    <input type="text" id="input-name">
+                </div>
+                <div class="input-field">
+                    <label for="input-title">Subtitle</label>
+                    <input type="text" id="input-title">
+                </div>
+                <div class="input-field">
+                    <label for="input-location">Location</label>
+                    <input type="text" id="input-location">
+                </div>
+                <div class="input-field">
+                    <label for="input-email">Email</label>
+                    <input type="email" id="input-email">
+                </div>
+                <div class="input-field">
+                    <label for="input-phone">Phone</label>
+                    <input type="text" id="input-phone">
+                </div>
+            </div>
+
+            <div class="customizer-section">
+                <h4><i class="fas fa-file-alt"></i> About Biography</h4>
+                <div class="input-field">
+                    <label for="input-about">Bio Details</label>
+                    <textarea id="input-about" rows="4"></textarea>
+                </div>
+            </div>
+            
+            <div class="customizer-actions-container">
+                <button id="btn-copy-config" class="customizer-action-btn copy-btn">
+                    <i class="fas fa-copy"></i> Copy Configuration
+                </button>
+                <button id="btn-download-config" class="customizer-action-btn download-btn">
+                    <i class="fas fa-download"></i> Download JSON
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Customizer Drawer Overlay -->
+    <div id="customizer-overlay" class="customizer-overlay"></div>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <span class="modal-badge" id="modal-category">Category</span>
+            <h3 class="modal-title" id="modal-title">Project Title</h3>
+            <div class="modal-tech" id="modal-tech">
+                <!-- JS elements -->
+            </div>
+            <p class="modal-desc" id="modal-desc">Detailed project description goes here...</p>
+            <div class="modal-actions">
+                <button class="cta-btn primary-btn modal-btn" id="modal-action-btn">Close Details</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="portfolio-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
